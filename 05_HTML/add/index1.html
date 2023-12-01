@@ -1,0 +1,126 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="form.php">
+       <table width="700">
+        <tr>
+            <td>
+                <h3>Простая форма поиска с вариантами:</h3>
+                <fieldset>
+                    <legend>Строка поиска:</legend>
+                    <input type="text" name="text" id="text" pattern="[0-9]{0,10}">
+                    <button type="submit">Искать</button> <br>
+                    <input type="radio" name="radio-group[]" value="value_01" id="Checkbox_Group1_0" checked> на сайте
+                    <input type="radio" name="radio-group[]" value="value_02" id="Checkbox_Group2_0" checked> в google <br>
+                    <em>Длина запроса не более 10 символов</em>
+                </fieldset>
+            </td>
+            <td><h3>Простая форма поиска с вариантами:</h3>
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <input type="text" name="text" id="text" autofocus required>*
+                    <button type="sumbit">Искать</button> <br>
+                    <input type="radio" name="radio-group[]" value="value_01" id="Checkbox_Group1_0" checked> на сайте
+                    <input type="radio" name="radio-group[]" value="value_02" id="Checkbox_Group2_0" checked> в google <br>
+                    <em>*- обязательное поле</em> <br>
+                    <em>Автофокус в поле поиска</em>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Простая форма авторизации</h3>
+                <fieldset>
+                    <legend>Авторизуйтесь</legend>
+                    <input type="text" name="text" id="text" required>* Логин <br>
+                    <input type="text" name="text" id="text" required>* Пароль <br>
+                    <input type="checkbox" name="hobby[]"> Оставаться в системе <br>
+                    <button type="submit">Войти</button><br>* -
+                    <em>обязательное поле</em>
+                </fieldset>
+            </td>
+            <td>
+                <h3>Опрос(голосование):</h3>
+                <fieldset>
+                    <legend>Как вам?</legend>
+                    <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked> Ничего <br>
+                    <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0" checked> Неплохо <br>
+                    <input type="radio" name="radio_group" value="value_03" id="Checkbox_Group3_0" checked> Хорошо <br>
+                    <input type="radio" name="radio_group" value="value_04" id="Checkbox_Group4_0" checked> Супер <br>
+                    <input type="text" name="date_voite" value="2013.12.31" style="display: none;">
+                    <button type="submit">Отправить</button> <br>
+                    <em>Есть скрытое поле <br> name=date_voite, value="2013.12.31" </em>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Отзыв:</h3>
+                <fieldset>
+                    <legend>Оставьте ваш отзыв</legend>
+                    <input type="text" name="text" id="text" required>* Имя <br>
+                    <input type="email" name="email" id="text" required>* e-mail <br>
+                    <textarea name="text_area" lang="ru" id="area" cols="20" rows="2">Форма отправки</textarea> <br>
+                    <button type="submit">Отправить</button> <br>
+                    <em>* - обязательное поле <br> поле email - с проверкой <br> метод POST</em>
+                </fieldset>
+            </td>
+            <td>
+                <h3>Выпадающий и мультисписки:</h3>
+                <fieldset>
+                    <legend>Города РБ</legend>
+                    <select name="list[]" id="list">
+                        <option value="1">Брест</option>
+                        <option value="2">Брест</option>
+                        <option value="3">Брест</option>
+                        <option value="4">Брест</option>
+                    </select>
+                    <select name="list" id="list" size="8" multiple><br>
+                        <optgroup label="Города РБ">
+                              <option value="1">Брест</option>
+                              <option value="2">Минск</option>
+                              <option value="3">Витебск</option>
+                        </optgroup>
+                        <optgroup label="Города России">
+                              <option value="4">Москва</option>
+                              <option value="5">Рязань</option>
+                              <option value="6">Магадан</option>
+                        </optgroup>
+                        </select>
+                        <button type="submit">Ок</button>   
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Загрузка файла на сервер</h3>
+                <fieldset>
+                    <legend>Upload</legend>
+                    Файл: <br>
+                    <input type="file" name="file_Field[]" id="file_Field"><br>
+                    Срок хранения(года:) <br>
+                    <input type="text" name="text[]" id="text" size="5">
+                    <button type="submit">загузить</button> <br>
+                    <em>Метод POST<br> В теге form используйте атрибут <br> enctype="multipart/form-data" для отправки <br> файла на сервер</em>
+                </fieldset>
+            </td>
+            <td>
+                <h3>Валидация данных HTML5:</h3>
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <input type="text" name="text[]" id="text" pattern="[А-Яа-яЁё].*" placeholder="Только русские буквы"><br>
+                    <em>Телефонный номер в формате <br> +XXX-XX-XXXXXXX, где X - любое число</em><br>
+                    <input type="tel" name="tel" id="tel" pattern="\+[0-9][3]-[0-9]{2}-[0-9]{7}" required><br>
+                    <button type="submit">Проверить</button>
+                </fieldset>
+            </td>
+        </tr>
+       </table> 
+    </form>
+ </body>
+ </html>
