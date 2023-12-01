@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="email" placeholder="введите адрес почты"> <br>
+<input type="url" placeholder="введите адрес сайта"> <br>
+<input type="date" placeholder="выберите дату"> <br>
+<input type="time" placeholder="введите время"> <br>
+<input type="number" min="0" max="100" step="10"> <br>
+<input type="range" min="1" max="10"> <br>
+<label for ="index_1" >Индекс:</label>
+<INPUT TYPE="text" ID="index_1" NAME="index_1" pattern="[0-9]{6,10}"> <small>(от 6 до 10) цифр</small><br>
+<label for ="index_2" >Индекс:</label>
+<INPUT TYPE="text" ID="index_2" NAME="index_2" pattern="^[A-Z].*"> <small>(Начинаться должно только с заглавной буквы)</small> <br>
+<label>
+<input type="checkbox" name="hobby[]"> check1
+</label><br>
+<label>
+<input type="checkbox" name="hobby[]"> check2
+</label><br>
+<label>
+<input type="checkbox" name="hobby[]"> check3
+</label><br>
+<select name="list" id="list"><br>
+    <optgroup label="Города РБ">
+          <option value="1">Брест</option>
+          <option value="2">Минск</option>
+          <option value="3">Витебск</option>
+    </optgroup>
+    <optgroup label="Города России">
+          <option value="4">Москва</option>
+          <option value="5">Рязань</option>
+          <option value="6">Магадан</option>
+    </optgroup>
+    </select>
+    
+   
+
+</body>
+</html>
