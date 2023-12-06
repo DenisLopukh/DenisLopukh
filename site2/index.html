@@ -5,25 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		body {
-			height:1000px ;
-		}
+        .body{
+            height: 1000px;
+        }
 		.header{
-			text-align:center;
-			height:50px;
+			display: flex;
+            justify-content: center;
+            align-items: center;
 		}
 		.menu{
-			width:200px;
-			height:300px;
+			width:400px;
+			height:810px;
 			float:left;
+            overflow: scroll;
 		}
 		.content{
-			margin-left: 200px;	
-			margin-right: 200px;
+            width: 1200px;
+            height: 810px;
+            display: flex;
 		}
 		.banner{
 			width:200px;
-			height:300px;
+			height:810px;
 			float:right;
 		}
 		.footer{
@@ -32,20 +35,104 @@
             text-align: center;
 		}
 		.wrap{
-			background:#f3f0f0;	
+				
 		}
 		.clear{
 			clear:both;		
 		}
+        iframe{
+            width: 1200px;
+            height: 810px;
+            border:0;
+        }
+        a:hover{
+            color: blue;
+        }
+        a{
+            color: black;
+        }
+        .fonbet{
+            width:200px;
+			height:810px;  
+        }
 
 	</style>
 </head>
 <body>
-	<div class="header">header</div>
+	<div class="header"><img src="kartinki/logo.png" alt="html" height="100" width="100"></div>
 	<div class="wrap">
-		<div class="menu">menu</div>
-		<div class="banner"><a href="https://www.gismeteo.by/weather-minsk-4248/"><img src="kartinki/pogoda.jpeg" alt="pogoda" width="50px"; height="50px"></a></div>
-		<div class="content">content</div>
+		<div class="menu">
+        <h2>Меню</h2>
+        <strong>01_HTML</strong> <br>
+        <p></p>
+        home <br>
+            <a href="main/01_HTML/home/index1.html" target="target">Программа на Python часть 1</a> <br>
+            <a href="main/01_HTML/home/index2.html" target="target">Программа на Python часть 2</a> <br>
+            <a href="main/01_HTML/home/index3.html" target="target">Программа на Python часть 3</a> <br>
+        add <br>
+        <a href="main/01_HTML/add/index.html" target="target">Заголовок первого уровня</a> <br>
+        index1.html <br>
+        <a href="main/01_HTML/index1.html" target="target">индивидуальное задание 1</a> <br>
+        index2.html <br>
+        <a href="main/01_HTML/index2.html" target="target">индивидуальное задание 2</a> <br>
+        <p></p>
+        <strong>02_HTML</strong> <br>
+        <p></p>
+        home <br>
+        <a href="main/02_HTML/home/index1.html" target="target">календарь на Январь</a> <br>
+        <a href="main/02_HTML/home/index2.html" target="target">прогноз погоды</a> <br>
+        index.html<br>
+        <a href="main/02_HTML/index.html" target="target">индивидуальное задание</a> <br>
+        <p></p>
+        <strong>03_HTML</strong>
+        <p></p>
+        home <br>
+        <a href="main/03_HTML/home/index1.html" target="target">ссылки часть 1</a> <br>
+        <a href="main/03_HTML/home/index2.html" target="target">ссылки часть 2</a> <br>
+        <a href="main/03_HTML/home/index3.html" target="target">ссылки часть 3</a> <br>
+        add <br>
+        <a href="main/03_HTML/add/index.html" target="target">ссылки дополнительное</a> <br>
+        index.html <br>
+        <a href="main/03_HTML/index.html" target="target">индивидуальное задание</a>
+        <p></p>
+        <strong>04_HTML</strong>
+        <p></p>
+        home <br>
+        <a href="main/04_HTML/home/index1.html" target="target">Python c изображениями 1</a> <br>
+        <a href="main/04_HTML/home/index2.html" target="target">Python c изображениями 2</a> <br>
+        <a href="main/04_HTML/home/index3.html" target="target">Python c изображениями 3</a> <br>
+        <p></p>
+        <strong>05_HTML</strong> <br>
+        <p></p>
+        home <br>
+        <a href="main/05_HTML/home/index1.html" target="target">Анкета регистрации</a> <br>
+        add <br>
+        <a href="main/05_HTML/add/index1.html" target="target">формы поиска и другое</a> <br>
+        index.html <br>
+        <a href="main/05_HTML/index.html" target="target">индивидуальное задание</a> <br>
+        <p></p>
+        <strong>06_HTML</strong> <br>
+        <p></p>
+        home <br>
+        <a href="main/06_HTML/home/index1.html" target="target">задание 1</a> <br>
+        <a href="main/06_HTML/home/index2.html" target="target">задание 2</a> <br>
+        <a href="main/06_HTML/home/index3.html" target="target">задание 3</a> <br>
+        <a href="main/06_HTML/home/index4.html" target="target">задание 4</a> <br>
+        <a href="main/06_HTML/home/index5.html" target="target">задание 5</a> <br>
+        <p></p>
+        <strong>07_HTML</strong> <br>
+        <p></p>
+        site1 <br>
+        <a href="main/07_HTML/site1/index.html" target="target">сайт 1</a> <br>
+        test 1 <br>
+        <a href="main/07_HTML/test1.html" target="target">тест 1</a> <br>
+        test 2 <br>
+        <a href="main/07_HTML/test2.html" target="target">тест 2</a> <br>
+        </div>
+		<div class="banner"><a href="https://fonbet.by/promo/event_60-60_2/?affijet-click=669400439&partner_id=2143&utm_medium=Affiliate&sub_1=%7Byandex-search%7D&sub_2=%7Bbrand%7D&sub_3=%7Bevent_60-60-2%7D&yclid=6732106034229018623"><img src="kartinki/fonbet.jpg" alt="fonbet" class="fonbet"></a></div>
+		<div class="content">
+            <iframe name="target" sandbox="allow-scripts allow-same-origin"></iframe>
+        </div>
 		<div class="clear"></div>
 	</div>
 	<div class="footer"><em>developed by <br>© Denis Lopukh</em></div>
