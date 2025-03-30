@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратный отсчёт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        #countdown {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Обратный отсчёт секунд ⏱️</h2>
+    <input type="number" id="secondsInput" placeholder="Введите секунды" min="1">
+    <button onclick="startCountdown()">Старт</button>
+    <p id="countdown"></p>
+
+    <script>
+        let countdownInterval;
+
+        function startCountdown() {
+            const secondsInput = document.getElementById('secondsInput');
+            const countdownDisplay = document.getElementById('countdown');
+            let seconds = parseInt(secondsInput.value);
+
+            if (isNaN(seconds) || seconds <= 0) {
+                countdownDisplay.innerHTML = "<span style='color: red;'>Введите корректное число!</span>";
+                return;
+            }
+
+            countdownDisplay.innerHTML = `⏳ Осталось: ${seconds} секунд`;
+
+            clearInterval(countdownInterval); // Очищаем предыдущий интервал
+
+            countdownInterval = setInterval(() => {
+                seconds--;
+                if (seconds > 0) {
+                    countdownDisplay.innerHTML = `⏳ Осталось: ${seconds} секунд`;
+                } else {
+                    countdownDisplay.innerHTML = "🎉 Время вышло!";
+                    clearInterval(countdownInterval);
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
